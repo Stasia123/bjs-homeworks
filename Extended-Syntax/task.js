@@ -11,20 +11,21 @@ function calculateQuadraticEquation(){
 }
 
 function getResult(a,b,c){
-  let D = b**2 - 4 * a * c;
-  let x;
+  let D = b*b - 4 * a * c;
+
   if (D > 0) {
       alert(`Два корня, т.к. Д =  ${D}`);
-      let x1 = ((-b) - Math.sqrt(D)) / 2 * a;
-      let x2 = ((-b) + Math.sqrt(D)) / 2 * a;
+      let x1 = ((-b) - Math.sqrt(D)) / (2 * a);
+      let x2 = ((-b) + Math.sqrt(D)) / (2 * a);
       return x = [Math.round(x1),Math.round(x2)];
   } else if (D === 0) {
       alert(`Один корень, т.к. Д =  ${D}`);
-      let x1 = ((-b) + Math.sqrt(D)) / 2 * a;
+      let x1 = ((-b) + Math.sqrt(D)) / (2 * a);
       return x = [Math.round(x1)];
   } else {
       alert(`Корней нет, т.к. Д =  ${D}`);
-      return x = [];
+      let x = [];
+      return x;
   }
 }
 
